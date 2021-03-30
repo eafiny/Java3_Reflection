@@ -41,6 +41,8 @@ public class MainTestClass {
                 testAnnotatedMethods.add(method);
             }
         }
+
+        //здесь нужно отсортировать список методов по приоритетам
         for (Method method:testAnnotatedMethods) {
             System.out.println("Выполняется метод с приоритетом " + method.getAnnotation(Test.class).priority());
             method.invoke(null);
